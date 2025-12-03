@@ -180,7 +180,7 @@ curl -X POST "https://api.telegram.org/bot<BOT_TOKEN>/setWebhook" \
 
 | Issue                         | Solution                                   |
 | ----------------------------- | ------------------------------------------ |
-| Bot not responding            | Check logs: `pm2 logs susumi-bot`          |
+| Bot not responding            | Check logs: `pm2 logs susumi-telegram-bot` |
 | `BOT_TOKEN is required`       | Ensure `.env` file exists with valid token |
 | `LAUNCHPAD_URL must be HTTPS` | Use `https://` protocol for URL            |
 | Webhook not receiving         | Verify HTTPS cert, secret, and path        |
@@ -194,7 +194,7 @@ curl -X POST "https://api.telegram.org/bot<BOT_TOKEN>/setWebhook" \
 pm2 status
 
 # View logs
-pm2 logs susumi-bot --lines 100
+pm2 logs susumi-telegram-bot --lines 100
 
 # Verify webhook
 curl "https://api.telegram.org/bot<BOT_TOKEN>/getWebhookInfo"
