@@ -1,0 +1,25 @@
+module.exports = {
+  apps: [{
+    name: 'susumi-bot',
+    script: 'dist/server.js',
+    instances: 1,
+    exec_mode: 'fork',
+    autorestart: true,
+    max_memory_restart: '500M',
+    env: {
+      NODE_ENV: 'YOUR_NODE_ENV',
+      PORT: 'YOUR_PORT',
+      BOT_USERNAME: 'YOUR_BOT_USERNAME',
+      BOT_TOKEN: 'YOUR_BOT_TOKEN',
+      LAUNCHPAD_URL: 'YOUR_LAUNCHPAD_URL',
+      WEBHOOK_DOMAIN: 'YOUR_WEBHOOK_DOMAIN',
+      WEBHOOK_PATH: 'YOUR_WEBHOOK_PATH',
+      WEBHOOK_SECRET: 'YOUR_WEBHOOK_SECRET',
+      RATE_LIMIT_WINDOW: 'YOUR_RATE_LIMIT_WINDOW',
+      RATE_LIMIT_MAX: 'YOUR_RATE_LIMIT_MAX',
+      MAX_MESSAGE_LENGTH: 'YOUR_MAX_MESSAGE_LENGTH',
+      LOG_LEVEL: 'YOUR_LOG_LEVEL',
+      LOGS_DIR: 'YOUR_LOGS_DIR',
+    },
+  }],
+};
