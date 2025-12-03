@@ -1,6 +1,6 @@
 module.exports = {
   apps: [{
-    name: 'susumi-bot',
+    name: 'susumi-telegram-bot',
     script: 'dist/server.js',
     instances: 1,
     exec_mode: 'fork',
